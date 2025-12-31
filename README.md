@@ -12,6 +12,10 @@ what if video players empowered everyone to build reliable and efficient, memory
 - since cargo generates files on the target directory based on the crate name rather than the directory name, this means it will easily fail without loading in the dynamic library hooks.
 - even then, _i still_ get warnings about the file names being too long, but at least they're just warnings instead of errors. easily suppressed by passing `RUSTFLAGS="-Awarnings"`.
 
+# motivations
+
+i saw, like, a resurgence of bad apple memes on youtube because of a... _certain occurrence_ that happened, and i was compiling a bevy project and then i thought to myself while i saw the crate names scroll down on my screen, what if we could run bad apple on the cargo compilation output?
+
 # license
 
 this project is licensed under the unlicense, because who the hell would want to use this code?
