@@ -9,8 +9,8 @@
 what if bad apple empowered everyone to build reliable and efficient, memory safe, and blazingly fast software?
 
 - **we-have-the-technology**: bad apple generator. NOT vibe coded. instead, it is drunk coded. 
-- **wet-appl**: the dynamic library i had to load in which hooks fs system calls to sanitize/fix/ignore the long file names for each frame. probably only supports macos. its also vibe coded, so please don't have any faith in the code
-- **whynot**: generated output.
+- **wet-appl**: the dynamic library i had to load in which hooks fs system calls to sanitize/fix/ignore the long file names for each frame. probably only supports macos. its, unfortunately, vibe coded (euugghhh 🤮🤮🤮), so please don't have any faith in the code or use it as a sample on how to hook into function calls with a dynamic library
+- **whynot**: generated output. the name speaks for itself.
 
 ## what's with the names of the crates?
 
@@ -86,6 +86,7 @@ $ cd <path to directory>
 
 # fun facts
 
+- in order to play bad apple, the dependency graph must form a straight line. that is, we start at frame0, which has no dependencies. frame1 depends on frame0, frame2 depends on frame1, frame{n} depends on frame{n-1}, and so on.
 - every crate name represents one frame. if you only include the 96x36 resolution, that means the crate name is at least **3456 characters long**. this doesn't include the frame number and the padding bytes to ensure the video is actually aligned with the terminal
 - since cargo generates files on the target directory based on the crate name rather than the directory name, this means it will easily fail without loading in the dynamic library hooks.
 - even then, _i still_ get warnings about the file names being too long, but at least they're just warnings instead of errors. easily suppressed by passing `RUSTFLAGS="-Awarnings"`.
@@ -94,7 +95,7 @@ $ cd <path to directory>
 
 # motivations
 
-i saw, like, a resurgence of bad apple memes on youtube because of a... _certain occurrence_ that happened, and i was compiling a bevy project and then i thought to myself while i saw the crate names scroll down on my screen, what if we could run bad apple on the cargo compilation output?
+i saw, like, a resurgence of bad apple memes on youtube because of a... _certain occurrence_ regarding a man and his island whose incriminating files got released that happened, and i was compiling a bevy project and then i thought to myself while i saw the crate names scroll down on my screen, what if we could run bad apple on the cargo compilation output?
 
 # faq
 
@@ -112,4 +113,4 @@ the geneva conventions doesn't cover software development yet, so as of the time
 
 # license
 
-this project is licensed under the unlicense, because who the hell would want to use this code? i am not liable as to whatever you use this monstrosity for, so DO NOT use it in produ--actually, i want to see _how_ you'd use it in production.
+this project is licensed under the unlicense, because who the hell would want to use this code? i am not liable as to whatever you use this monstrosity for, so DO NOT use it in produ--actually, i want to see _how_ you'd use it in production. don't blame though if you cause an oopsie woopsie :3
