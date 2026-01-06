@@ -23,7 +23,7 @@ i've got not clue either. i just blacked out and woke up with 107mb worth of tex
 1. clone the github repo and change directories to it **(IMPORTANT: you should probably clone it onto a temporary ramdisk. `whynot` would ram your SSD with small random reads/writes, which i'm not so sure will have any noticeable effect, but it's good to be cautious just in case. unless, you only have 8 gb of ram or something. then just rawdog it i guess, this repo is only 107 mb _including_ `whynot`)**.
 
 ```bash
-$ git clone https://github.com/ALinuxPerson/red-apple.git && cd red-appl
+$ git clone https://github.com/ALinuxPerson/red-apple.git && cd red-apple
 ```
 
 2. go to `wet-appl` and build it.
